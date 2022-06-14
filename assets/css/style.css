@@ -206,6 +206,8 @@ body {
 }
 
 .second-container {
+  max-width: 1500px;
+  margin: 0 auto;
   min-height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,12 +228,78 @@ body {
   color: #ffff00;
 }
 
+.third-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.third-title {
+  color: #000;
+  font-family: "Sarala", Sans-serif;
+  font-size: clamp(40px, 4vw, 45px);
+  font-weight: 600;
+  text-align: center;
+  background-color: #FFE70A;
+  padding: 10px 12px;
+}
+
+.third-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.third-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.third-items__img {
+  border: 2px solid #FFE70A;
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  padding: 20px;
+}
+
+.third-items__name {
+  font-family: "Dosis", Sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 26px;
+  color: #000;
+}
+
+.third-items__description {
+  color: #000;
+  font-family: "Arial", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 992px) {
   .first-box {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .third-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -265,6 +333,31 @@ body {
 
   .header-logo {
     min-height: 0;
+  }
+
+  .third-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .third-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .third-items__wrapper {
+    text-align: center;
   }
 }
 @media (max-width: 576px) {
