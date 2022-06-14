@@ -15,6 +15,8 @@ body {
 }
 
 .header-container {
+  max-width: 1920px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -131,17 +133,65 @@ body {
   transition: 0.5s;
 }
 
-@media (max-width: 576px) {
-  .header-logo__img {
-    max-width: 160px;
-  }
+.first-section-containre {
+  padding: 0;
+}
 
-  .header-title__h1 {
-    font-size: 36px;
-  }
+.first-wrapper {
+  background-color: #c4c1c3;
+}
 
-  .header {
-    height: 75vh !important;
+.first-title {
+  color: #000;
+  font-family: "Sarala", Sans-serif;
+  font-size: clamp(40px, 4vw, 45px);
+  font-weight: 600;
+  text-align: center;
+  background-color: #FFE70A;
+  padding: 10px 12px;
+}
+
+.first-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.first-items {
+  text-align: center;
+  background-color: #fff;
+}
+
+.first-items__img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.first-items__name {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.first-items__description {
+  padding: 0 10px 30px;
+  color: #000;
+  font-family: "Arial", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+@media (max-width: 992px) {
+  .first-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
@@ -175,5 +225,25 @@ body {
 
   .header-logo {
     min-height: 0;
+  }
+}
+@media (max-width: 576px) {
+  .header-logo__img {
+    max-width: 160px;
+  }
+
+  .header-title__h1 {
+    font-size: 36px;
+  }
+
+  .header {
+    height: 75vh !important;
+  }
+
+  .first-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
   }
 }
