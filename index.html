@@ -198,6 +198,34 @@ $title = $text . ' ' . $city;
                                 <img class="fifth-box__img" src="assets/img/7trezor.jpg" alt="" >
                                 <img class="fifth-box__img" src="assets/img/8zabezpeceni.jpg" alt="" >
                             </div>
+                            <div class="forms-box mt-5">
+                                <form id="jq_form">
+                                    <h6 class="forms__h6 text-center forms-box__title">Objednejte si zámečníka!<h6>
+                                    <div class="mb-3 mt-4">
+                                        <input class="form-control" placeholder="Jméno" name="jq_name" type="text">
+                                        <div id="jq_name" style="font-size:15px;color:red;padding-top:2px;display:none">Toto je požadované pole.</div>
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="Telefon" name="jq_phone" type="text">
+                                        <div id="jq_phone" style="font-size:15px;color:red;padding-top:2px;display:none">Toto je požadované pole.</div>
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="Ulice" name="jq_street" type="text">
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="PSČ / město" name="jq_city" type="text">
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="E-Mail" name="jq_email" type="text"> 
+                                    </div>
+                                    <div class="my-3">
+                                        <textarea rows="5" class="form-control" name="jq_text" placeholder="Zprávy"></textarea>
+                                        <div id="jq_text" style="font-size:15px;color:red;padding-top:2px;display:none">Toto je požadované pole.</div>
+                                    </div>
+                                    <input class="btn text-uppercase fw-bold mb-1 px-5 py-2 forms-box__buttom" type="submit" id="jq_submit" value="Odeslat"> 
+                                    <div id="jq_success" style="display:none">Díky za vaši zprávu. Byla odeslána.</div>
+                                </form> 
+                            </div>
                         </div>
                     </div>
                 </div>
