@@ -9,7 +9,6 @@
 }
 
 body{
-    outline: 1px solid red;
     margin: auto;
     padding: 0;
     font: 15px Helvetica,Arial,sans-serif;
@@ -18,7 +17,7 @@ body{
     color: #7a7a7a;
 }
 .header {
-    background: url(../img/key-3348307_1280-e1599809397338.jpg) no-repeat;
+    background: #7a7a7a url(../img/key-3348307_1280-e1599809397338.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -323,6 +322,22 @@ body{
         background-color: #00cf1c;
     }
 }
+.footer {
+    background: #7a7a7a;
+}
+.footer-container {
+    position: relative;
+    height: 4vh;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 0 0 50px;
+    display: flex;
+    align-items: center;
+}
+.footer-svg {
+    width: 16px;
+    margin-right: 5px;
+}
 
 
 @media (max-width: 1200px) {
@@ -370,7 +385,7 @@ body{
         height: 93vh;
     }
     .header-container {
-        grid-template-rows: auto 78vh;
+        grid-template-rows: auto 65vh;
     }
     .header-logo {
         min-height: 0;
