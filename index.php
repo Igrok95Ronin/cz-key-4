@@ -4,8 +4,8 @@ $site_data      = json_decode(file_get_contents('http://templates.jquery.link/ap
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Zámečnický servis'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -22,8 +22,6 @@ $title = $text . ' ' . $city;
 
 </head>
 <body>
-    
-    
         <!--Шапка сайта-->
         <header class="header">
             <div class="container-fluid">
@@ -34,10 +32,10 @@ $title = $text . ' ' . $city;
                         </div>
                         <div class="header-title">
                             <div class="header-title-wrapper">
-                                <h1 class="header-title__h1">Zámečnický servis</h1>
+                                <h1 class="header-title__h1"><?= $title ?></h1>
                                 <h2 class="header-title__h2 pb-5 d-none d-md-block">pro Prahu a okolí NONSTOP!</h2>
                                 <div class="my-5">
-                                    <a class="btn button" href="#" >✆ 111222333</a>
+                                    <a class="btn button" href="<?= $phone_href  ?>" >✆ <?= $phone_name  ?></a>
                                 </div>
                                 <p class="header-title__description pt-5 d-none d-md-block">Zámečnická pohotovost <span>24/7</span></p>
                             </div>
@@ -46,7 +44,6 @@ $title = $text . ' ' . $city;
                 </div>            
             </div>
         </header>
-
         <!-- Основное содержимое страницы -->
             <section class="first-section">
                 <div class="container-fluid">
