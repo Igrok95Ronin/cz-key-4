@@ -279,6 +279,20 @@ body{
     text-transform: uppercase;
     margin: 0;
 }
+//fifth section
+
+.fifth-title {
+    @include title();
+    text-transform: uppercase;
+}
+.fifth-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.fifth-box__img {
+    width: 100%;
+}
 
 
 
@@ -297,6 +311,9 @@ body{
     }
     .fourth-box {
         row-gap: 100px;
+    }
+    .fifth-box {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 768px) {
@@ -356,5 +373,8 @@ body{
     }
     .fourth-box {
         row-gap: 50px;
+    }
+    .fifth-box {
+        grid-template-columns:  1fr;
     }
 }
